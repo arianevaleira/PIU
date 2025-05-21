@@ -6,6 +6,8 @@ import Info_1v from './componentes/Info_1v'
 import ChangeBackground from './componentes/ChangeBackground'
 import ChangeValue from './componentes/ChangeValue'
 import Props from './componentes/Props'
+import Children from './componentes/Children'
+import Card from './componentes/Card'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -17,8 +19,11 @@ function App() {
       <Escopo/>
       <Botao/>
       <EscopoReduz/> */}
-      <Info_1v/>
-      <Props nome={"Um nome"} newname={"novo"} matricula={20221101110024}/>
+      {/* <Info_1v/>
+      <Props nome={"Um nome"} newname={"novo"} matricula={20221101110024}/> */}
+      <Children>
+        <Card/>
+      </Children>
      </>
   )
 }
