@@ -7,8 +7,8 @@ export default function Card(){
     return(
         <div>
             <figure>
-                <img src={screen} alt="O incrivel Mundo de gumball" />
-                <figcaption>Imagem de corrente em tons vermelhos</figcaption>
+                <img src={screen} alt="Imagem Do incrivel mundo de Gumball" />
+                <figcaption>Mundo de Gumball</figcaption>
             </figure>
         </div>
     )
