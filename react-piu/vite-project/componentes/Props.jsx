@@ -1,4 +1,4 @@
-export default function Props ({nome, newname}){
+export default function Props ({nome, newname,  matricula}){
 
     return(
         <>
@@ -6,6 +6,7 @@ export default function Props ({nome, newname}){
                 <h2>Teste props</h2>
                 <p>O nome {nome} foi enviado via props</p>
                 <p>{newname}</p>
+                <p>{matricula}</p>
             </div>
         </>
     )
