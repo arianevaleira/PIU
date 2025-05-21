@@ -24,6 +24,10 @@ function App() {
       <Children>
         <Card/>
       </Children>
+      <br />
+      <Children>
+        <Card/>
+      </Children>
      </>
   )
 }
