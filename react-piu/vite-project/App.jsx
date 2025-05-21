@@ -18,7 +18,7 @@ function App() {
       <Botao/>
       <EscopoReduz/> */}
       <Info_1v/>
-      <Props nome={"Um nome"} newname={"novo"}/>
+      <Props nome={"Um nome"} newname={"novo"} matricula={20221101110024}/>
      </>
   )
 }
