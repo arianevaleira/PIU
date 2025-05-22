@@ -21,9 +21,8 @@ function App() {
       <EscopoReduz/> */}
       {/* <Info_1v/>
       <Props nome={"Um nome"} newname={"novo"} matricula={20221101110024}/> */}
-      <Children>
+
         <Card/>
-      </Children>
       <br />
       <Children>
         <Card/>
