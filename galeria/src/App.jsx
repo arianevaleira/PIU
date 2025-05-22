@@ -7,26 +7,15 @@ import ChangeBackground from './componentes/ChangeBackground'
 import ChangeValue from './componentes/ChangeValue'
 import Props from './componentes/Props'
 import Children from './componentes/Children'
-import Card from './componentes/Card'
+import Card from './componentes/Card' 
+import NavBar from './componentes/NavBar'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
      <>
-      {/* <Escopo/>
-      <Escopo/>
-      <Escopo/>
-      <Botao/>
-      <EscopoReduz/> */}
-      {/* <Info_1v/>
-      <Props nome={"Um nome"} newname={"novo"} matricula={20221101110024}/> */}
-
-        <Card/>
-      <br />
-      <Children>
-        <Card/>
-      </Children>
+       <NavBar/>
      </>
   )
 }
