@@ -3,6 +3,7 @@ import "./Card.css";
 import gumball from "../assets/gumball.webp";
 import estacao from "../assets/estacao.jpg";
 import hermione from "../assets/hermione.jpg";
+import turma from  "../assets/turma_gumball.png";
 import escudo from "../assets/esscudo_hogwarts.jpg";
 
 export default function Card() {
@@ -45,6 +46,24 @@ export default function Card() {
             className="card-image"
             />
             <figcaption>Mundo de hermione</figcaption>
+        </figure>
+        <figure className="card">
+            <img 
+            src={estacao} 
+            alt="Imagem Do incrível mundo de Gumball" 
+            onClick={() => handleImageClick(estacao)}
+            className="card-image"
+            />
+            <figcaption>Mundo de estacao</figcaption>
+        </figure>
+         <figure className="card">
+            <img 
+            src={turma} 
+            alt="Imagem Do incrível mundo de Gumball" 
+            onClick={() => handleImageClick(turma)}
+            className="card-image"
+            />
+            <figcaption>Mundo de turma</figcaption>
         </figure>
         
       {zoomedImage && (

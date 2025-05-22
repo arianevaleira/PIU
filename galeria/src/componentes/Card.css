@@ -1,41 +1,50 @@
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
   justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #1e1e1e;
 }
 
 .card {
-  width: 180px;
-  cursor: pointer;
+  background-color: #2c2c2c;
+  border-radius: 12px;
+  overflow: hidden;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 180px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
 .card-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.card-image:hover {
-  transform: scale(1.05);
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #444;
 }
 
 figcaption {
-  margin-top: 8px;
-  font-weight: bold;
+  color: #f0f0f0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px;
 }
 
-/* Modal de imagem */
+/* Modal */
 .image-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0,0,0,0.85);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,26 +61,19 @@ figcaption {
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .close-button {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  background: white;
+  top: -15px;
+  right: -15px;
+  background: #fff;
+  color: #000;
   border: none;
-  font-size: 24px;
+  font-size: 28px;
   padding: 4px 10px;
   border-radius: 50%;
   cursor: pointer;
-}
-
-body.dark .image-modal {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-body.dark .close-button {
-  background-color: black;
-  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }

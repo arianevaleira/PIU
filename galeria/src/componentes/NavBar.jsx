@@ -6,9 +6,9 @@ export default function NavBar(){
            <nav>
                <h3>Galeria</h3>
                <div>
-                   <a href="#">Link</a>
-                   <a href="#">Link</a>
-                   <a href="#">Link</a>
+                   <a href="#">Saiba-Mais</a>
+                   <a href="#">Entre em Contato</a>
+                   <a href="#">Sair</a>
                </div>
            </nav>
         </>
