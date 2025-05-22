@@ -9,6 +9,7 @@ import Props from './componentes/Props'
 import Children from './componentes/Children'
 import Card from './componentes/Card' 
 import NavBar from './componentes/NavBar'
+import BotaoDark from './componentes/BotaoDark'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
      <>
        <NavBar/>
        <Card/>
+       <BotaoDark/>
      </>
   )
 }
