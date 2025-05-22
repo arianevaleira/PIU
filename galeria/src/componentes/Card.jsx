@@ -3,6 +3,7 @@ import "./Card.css";
 import gumball from "../assets/gumball.webp";
 import estacao from "../assets/estacao.jpg";
 import hermione from "../assets/hermione.jpg";
+import escudo from "../assets/esscudo_hogwarts.jpg";
 
 export default function Card() {
   const [zoomedImage, setZoomedImage] = useState(null);
@@ -26,7 +27,26 @@ export default function Card() {
         />
         <figcaption>Mundo de Gumball</figcaption>
       </figure>
-
+      
+        <figure className="card">
+            <img 
+            src={escudo} 
+            alt="Imagem Do incrível mundo de escudo" 
+            onClick={() => handleImageClick(escudo)}
+            className="card-image"
+            />
+            <figcaption>Mundo de escudo</figcaption>
+        </figure>
+        <figure className="card">
+            <img 
+            src={hermione} 
+            alt="Imagem Do incrível mundo de Gumball" 
+            onClick={() => handleImageClick(hermione)}
+            className="card-image"
+            />
+            <figcaption>Mundo de hermione</figcaption>
+        </figure>
+        
       {zoomedImage && (
         <div className="image-modal" onClick={closeZoom}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
