@@ -3,7 +3,8 @@ import "./Galeria.css";
 
 export default function Galeria({ personagens, onPersonagemClick }) {
   return (
-    <div className="galeria-container">
+    
+    <div className="card-container">
       {personagens.map((personagem) => (
         <Card 
           key={personagem.id}

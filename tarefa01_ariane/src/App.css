@@ -1,7 +1,8 @@
-body{
-   min-height: 130vh;
-   display: flex;
+body {
+  min-height: 100vh;
+  margin: 0;
 }
+
 
 #root {
   max-width: 1280px;
@@ -47,8 +48,6 @@ body{
 }
 
 
-
-/* App.css */
 .app {
   display: flex;
   flex-direction: column;
