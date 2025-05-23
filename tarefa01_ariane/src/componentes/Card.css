@@ -5,7 +5,8 @@
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 330px;
+  display: flex;
+  min-width: 350px;
   
 }
 

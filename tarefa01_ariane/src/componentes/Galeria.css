@@ -7,3 +7,10 @@
   background-color: #1e1e1e;
   border-radius: 12px;
 }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
