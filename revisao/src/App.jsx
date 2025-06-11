@@ -10,19 +10,21 @@ import Frase from './componentes/Frase'
 import Evento from './componentes/Evento'
 import Condicional from './componentes/Condicional'
 import Cliques from './componentes/Cliques'
+import Lista from './componentes/Lista'
+
+
 function App() {
+  const meusItens = ['React', 'Vue', 'Angular']
+
   const [count, setCount] = useState(0)
   const nome = "Ariane"
   const idade = 18
   const profissao = 'Programadora'
   const foto = gumball
   return (
-
     <>
-       <h1>Testando Evento</h1>
-       <Evento/>
-       <Condicional />
-       <Cliques />
+      <h1>Renderização de Listas</h1>
+      <Lista itens={meusItens}/>
     </>
   )
 }
