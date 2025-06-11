@@ -1,0 +1,33 @@
+.lista {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cabecalho {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.cabecalho h1 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.cabecalho p {
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.itens {
+  margin-top: 16px;
+}
+
+/* Estilos para tema escuro */
+.escuro .cabecalho h1 {
+  color: #ecf0f1;
+}
+
+.escuro .cabecalho p {
+  color: #bdc3c7;
+}

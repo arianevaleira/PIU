@@ -1,0 +1,36 @@
+.container {
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para tema claro (padrão) */
+.container:not(.escuro) {
+  background-color: #f5f7fa;
+  color: #2c3e50;
+}
+
+/* Estilo para tema escuro */
+.container.escuro {
+  background-color: #1a1a1a;
+  color: #ecf0f1;
+}
+
+.container.escuro .item {
+  background-color: #2d3436;
+  border-color: #636e72;
+  color: #dfe6e9;
+}
+
+.container.escuro .item .conteudo h3 {
+  color: #dfe6e9;
+}
+
+.container.escuro .item .conteudo p {
+  color: #b2bec3;
+}
+
+.container.escuro .item.concluida {
+  background-color: #3d3d3d;
+  opacity: 0.8;
+}

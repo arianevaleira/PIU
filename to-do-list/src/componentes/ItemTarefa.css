@@ -1,0 +1,48 @@
+.item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.item.concluida {
+  background-color: #f0f0f0;
+  opacity: 0.7;
+}
+
+.item.concluida .conteudo h3,
+.item.concluida .conteudo p {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.conteudo {
+  flex: 1;
+}
+
+.conteudo h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.conteudo p {
+  margin: 0;
+  color: #666;
+}
+
+.botao {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #45a049;
+}
