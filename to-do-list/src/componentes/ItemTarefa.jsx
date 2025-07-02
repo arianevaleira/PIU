@@ -12,7 +12,7 @@ const ItemTarefa = ({ tarefa, aoClicar }) => {
         onClick={() => aoClicar(tarefa.id)}
         className="botao"
       >
-        {tarefa.concluida ? '✓' : 'Concluir'}
+        {tarefa.concluida ? 'Concluida' : 'Concluir'}
       </button>
     </div>
   );

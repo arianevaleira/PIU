@@ -4,13 +4,12 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Estilo para tema claro (padrão) */
 .container:not(.escuro) {
   background-color: #f5f7fa;
   color: #2c3e50;
 }
 
-/* Estilo para tema escuro */
+
 .container.escuro {
   background-color: #1a1a1a;
   color: #ecf0f1;

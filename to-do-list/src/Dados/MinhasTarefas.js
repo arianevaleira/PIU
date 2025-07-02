@@ -1,8 +1,8 @@
 export const tarefasIniciais = [
   {
     id: 1,
-    titulo: "Compras no mercado",
-    descricao: "Leite, ovos, pão e frutas",
+    titulo: "tarefa de react",
+    descricao: "fazer esta tarefa",
     concluida: false
   },
   {
@@ -14,7 +14,7 @@ export const tarefasIniciais = [
   {
     id: 3,
     titulo: "Fazer exercícios",
-    descricao: "Caminhar por 30 minutos",
+    descricao: "Estudar por 30 minutos",
     concluida: false
   }
 ];
