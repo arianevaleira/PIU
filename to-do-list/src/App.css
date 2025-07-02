@@ -10,13 +10,11 @@ body {
   box-sizing: border-box;
 }
 
-/* Estilos consistentes para todos os botões */
 button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-/* Estilo para o modo escuro no body */
 body.escuro {
   background-color: #121212;
 }

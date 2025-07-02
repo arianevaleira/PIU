@@ -8,10 +8,13 @@ const ItemTarefa = ({ tarefa, aoClicar }) => {
         <h3>{tarefa.titulo}</h3>
         <p>{tarefa.descricao}</p>
       </div>
-      <button 
-        onClick={() => aoClicar(tarefa.id)}
-        className="botao"
-      >
+      <select name="" id="">
+         <option value="Alta">Prioridade Alta</option>
+         <option value="Média">Prioridade Média</option>
+         <option value="Baixa">Prioridade Baixa</option>
+      </select>
+      <button>Excluir Tarefa</button>
+      <button onClick={() => aoClicar(tarefa.id)} className="botao">
         {tarefa.concluida ? 'Concluida' : 'Concluir'}
       </button>
     </div>
