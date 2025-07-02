@@ -16,5 +16,11 @@ export const tarefasIniciais = [
     titulo: "Fazer exercícios",
     descricao: "Estudar por 30 minutos",
     concluida: false
-  }
+  },
+  {
+    id: 4,
+    titulo: "Estudar React De novo",
+    descricao: "Adicionar a função de Excluir tarefas",
+    concluida: true
+  },
 ];
