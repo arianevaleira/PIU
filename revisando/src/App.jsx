@@ -23,6 +23,7 @@ function App() {
 
   return (
     <>
+      <Renderizacao/>
       <h1>Renderização de Listas</h1>
       <Lista itens={meusItens}/>
       <ButtonAumentar/>

@@ -1,22 +1,23 @@
 import { func } from "prop-types"
-import { useState } from "react"
+import { use, useState } from "react"
 
 function Renderizacao(){
 
     const [email,setEmail] = useState()
     const [senha, setSenha] = useState()
     const [userEmail, setUserEmail] = useState()
-    
+    const [userSenha, setUserSenha] = useState()
+     
     function enviarEmail(e){
         e.preventDefault()
         setUserEmail(email)
-        console.log("Testando")
+        console.log("Testando Email")
     }
     
     function enviarSenha(e){
         e.preventDefault()
-        setSenha(senha)
-        console.log("Testando")
+        setUserSenha(senha)
+        console.log("Testando Senha")
     }
 
     function limparEmail(e){
@@ -34,10 +35,10 @@ function Renderizacao(){
                    <div>
                        <p>O email do usuario é: {userEmail}</p>
                        <button onClick={limparEmail}>Limpar-email</button>
-                       <form>
+                       <div>
                           <input type="password" placeholder="Digite sua senha..." onChange={(e) => setSenha(e.target.value) } />
                           <button onClick={enviarSenha}>Enviar-senha</button>
-                       </form>
+                       </div>
                    </div>
                )}
             </form>
