@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { tarefasIniciais } from './Dados/MinhasTarefas';
 import ListaTarefas from './componentes/ListaTarefas';
 import BotaoTema from './componentes/BotaoTema';
 import Layout from './componentes/Layout';
-import ItemTarefa from "./componentes/ItemTarefa";
 import './App.css';
 
 function App() {
