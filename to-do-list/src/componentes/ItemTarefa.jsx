@@ -4,7 +4,7 @@ function ItemTarefa({ tarefa, aoClicar, aoAlterarPrioridade }) {
 
   const handleAlterarPrioridade = (event) => {
     const novaPrioridade = event.target.value;
-    aoAlterarPrioridade(tarefa.id, novaPrioridade); // informa ao componente pai
+    aoAlterarPrioridade(tarefa.id, novaPrioridade); 
   };
 
   return (
