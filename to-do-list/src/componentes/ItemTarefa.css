@@ -141,3 +141,38 @@ select:focus {
   background-color: #d4edda;
   border: 1px solid #c3e6cb;
 }
+
+
+
+.botao-3d {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.botao-3d:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+.botao-3d:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ordena {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

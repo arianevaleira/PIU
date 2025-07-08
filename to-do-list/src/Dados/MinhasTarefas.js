@@ -33,6 +33,13 @@ export const tarefasIniciais = [
     descricao: "Adicionar a função de Excluir tarefas",
     concluida: true,
     prioridade: "Alta"
+  },
+  {
+    id: 6,
+    titulo: "Aprender React De novo",
+    descricao: "Adicionar a função de Excluir tarefas",
+    concluida: true,
+    prioridade: "Alta"
   }
 ];
 
