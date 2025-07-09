@@ -23,7 +23,6 @@ function ListaTarefas({ tarefas, aoConcluir,children, aoExcluir, aoAlterarPriori
     );
     setLista(listaOrdenada);
   };
- // esse é o meu que preciso subir para o git
   return (
     <div className="lista">
       <div className="cabecalho">

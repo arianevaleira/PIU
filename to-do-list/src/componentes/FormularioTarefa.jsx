@@ -19,6 +19,7 @@ const FormularioTarefa = ({ aoAdicionar }) => {
 
   return (
     <form className="formulario" onSubmit={handleSubmit}>
+      <h3>Adicionar Tarefa</h3>
       <input
         type="text"
         placeholder="Título"
@@ -38,7 +39,7 @@ const FormularioTarefa = ({ aoAdicionar }) => {
         <option value="Media">Média</option>
         <option value="Baixa">Baixa</option>
       </select>
-      <button type="submit" className='botao-3d'>Adicionar Tarefa</button>
+      <button type="submit" className='botao-3d'>+ Adicionar</button>
     </form>
   );
 };
