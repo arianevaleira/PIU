@@ -7,7 +7,14 @@ body {
   background-color: #f5f7fa !important;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  padding: 0;
+}
+
+#root{
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 * {
