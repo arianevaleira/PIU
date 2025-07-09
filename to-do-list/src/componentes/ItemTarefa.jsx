@@ -4,7 +4,11 @@ import { useState } from 'react';
 const ItemTarefa = ({ tarefa, aoClicar, aoAlterarPrioridade, aoExcluir }) => {
 
   const [mostrarModal, setMostrarModal] = useState(false);
+  
 
+  //-------------------------------
+  // Modal de confirmação (Excluir)
+  //-------------------------------
   const abrirModal = () => setMostrarModal(true);
   const fecharModal = () => setMostrarModal(false);
 
@@ -24,11 +28,7 @@ const ItemTarefa = ({ tarefa, aoClicar, aoAlterarPrioridade, aoExcluir }) => {
           </p>
         </div>
 
-        <select
-          value={tarefa.prioridade}
-          onChange={(e) => aoAlterarPrioridade(tarefa.id, e.target.value)}
-          className="prioridade"
-        >
+        <select value={tarefa.prioridade} onChange={(e) => aoAlterarPrioridade(tarefa.id, e.target.value)} className="prioridade">
           <option value="Alta">Prioridade Alta</option>
           <option value="Media">Prioridade Média</option>
           <option value="Baixa">Prioridade Baixa</option>
@@ -40,7 +40,8 @@ const ItemTarefa = ({ tarefa, aoClicar, aoAlterarPrioridade, aoExcluir }) => {
           {tarefa.concluida ? <span>✓ Concluída</span> : <span>Concluir</span>}
         </button>
       </div>
-
+       
+      {/*Aqui Declaramos que so vai mostrar o modal se mostrarmodal for True*/}
       {mostrarModal && (
         <div className="modal fade show d-block" tabIndex="-1" role="dialog" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <div className="modal-dialog modal-dialog-centered" role="document">

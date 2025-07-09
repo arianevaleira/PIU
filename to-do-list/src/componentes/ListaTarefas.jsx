@@ -4,11 +4,11 @@ import './ListaTarefas.css';
 
 function ListaTarefas({ tarefas, aoConcluir,children, aoExcluir, aoAlterarPrioridade, }) { 
   const [lista, setLista] = useState([]);
-
+  
   useEffect(() => {
     setLista(tarefas);
   }, [tarefas]);
-
+ 
   const ordenarPorTitulo = () => {
     const listaOrdenada = [...lista].sort((a, b) =>
       a.titulo.localeCompare(b.titulo)

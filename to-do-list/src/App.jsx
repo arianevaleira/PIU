@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   const [tarefas, setTarefas] = useState(tarefasIniciais);
   const [temaEscuro, setTemaEscuro] = useState(false);
-
+ 
   useEffect(() => {
     if (temaEscuro) {
       document.body.classList.add('escuro');
@@ -18,7 +18,7 @@ function App() {
       document.body.classList.remove('escuro');
     }
   }, [temaEscuro]);
-
+   
   const alternarConclusao = (id) => {
     setTarefas(tarefas.map(tarefa =>
       tarefa.id === id ? { ...tarefa, concluida: !tarefa.concluida } : tarefa
