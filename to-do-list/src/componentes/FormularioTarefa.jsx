@@ -1,39 +1,45 @@
-import { useState } from 'react';
-import './FormularioTarefa.css'
+import { useState, useEffect } from "react";
+import ItemTarefa from "./ItemTarefa"; 
+import './ListaTarefas.css';
 
-const FormularioTarefa = ({ aoAdicionar }) => {
-  const [titulo, setTitulo] = useState('');
-  const [descricao, setDescricao] = useState('');
-  const [prioridade, setPrioridade] = useState('Media');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!titulo.trim()) return; //O trim é para tirar os espaços em branco
-
-    aoAdicionar({ titulo, descricao, prioridade });
-    setTitulo('');
-    setDescricao('');
-    setPrioridade('Media');
+function ListaTarefas({ tarefas, aoConcluir,children, aoExcluir, aoAlterarPrioridade, }) { 
+  const [lista, setLista] = useState([]);
+  
+  useEffect(() => {
+    setLista(tarefas);
+  }, [tarefas]);
+ 
+  const ordenarPorTitulo = () => {
+    const listaOrdenada = [...lista].sort((a, b) =>
+      a.titulo.localeCompare(b.titulo)
+    );
+    setLista(listaOrdenada);
   };
 
-  return (
-    <form className="formulario" onSubmit={handleSubmit}>
-      <h3>Adicionar Tarefa</h3>
-      <label>Tarefa:</label>
-      <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitulo(e.target.value)}/>
-      <label>Descrição:</label>
-      <textarea placeholder="Descrição da tarefa" value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
-      <label>Prioridade:</label>
-      <select value={prioridade} onChange={(e) => setPrioridade(e.target.value)}>
-        <option value="Alta">Alta</option>
-        <option value="Media">Média</option>
-        <option value="Baixa">Baixa</option>
-      </select>
 
-      <button type="submit" className='botao'>+ Adicionar</button>
-    </form>
+  const ordenarPorPrioridade = () => {
+    const prioridadeValor = { "Alta": 3, "Media": 2, "Baixa": 1 };
+    const listaOrdenada = [...lista].sort((a, b) =>
+      prioridadeValor[b.prioridade] - prioridadeValor[a.prioridade]
+    );
+    setLista(listaOrdenada);
+  };
+  return (
+    <div className="lista">
+      <div className="cabecalho">
+        {children}
+        <div className='ordena'>
+          <button onClick={ordenarPorTitulo} className='botao'>Ordenar por Título</button>
+          <button onClick={ordenarPorPrioridade} className='botao'>Ordenar por Prioridade</button>
+        </div>
+      </div>
+      <div className="itens">
+        {lista.map(tarefa => (
+           <ItemTarefa key={tarefa.id} tarefa={tarefa} aoClicar={aoConcluir} aoExcluir={aoExcluir} aoAlterarPrioridade={aoAlterarPrioridade}/>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default FormularioTarefa;
+export default ListaTarefas;
