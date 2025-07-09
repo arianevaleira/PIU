@@ -1,5 +1,5 @@
 .lista {
-  max-width: 800px;
+  min-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
