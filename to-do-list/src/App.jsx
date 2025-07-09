@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { tarefasIniciais } from './Dados/MinhasTarefas';
 import ListaTarefas from './componentes/ListaTarefas';
 import BotaoTema from './componentes/BotaoTema';
@@ -11,14 +11,7 @@ function App() {
   const [tarefas, setTarefas] = useState(tarefasIniciais);
   const [temaEscuro, setTemaEscuro] = useState(false);
  
-  useEffect(() => {
-    if (temaEscuro) {
-      document.body.classList.add('escuro');
-    } else {
-      document.body.classList.remove('escuro');
-    }
-  }, [temaEscuro]);
-   
+
   const alternarConclusao = (id) => {
     setTarefas(tarefas.map(tarefa =>
       tarefa.id === id ? { ...tarefa, concluida: !tarefa.concluida } : tarefa
@@ -29,7 +22,7 @@ function App() {
   };
    
   const adicionarTarefa = (novaTarefa) => {
-    setTarefas([...tarefas, { ...novaTarefa, id: Date.now(), concluida: false }]);
+    setTarefas([...tarefas, { ...novaTarefa, id:  Math.floor(Math.random()*10000), concluida: false }]);
   };
   
   const alternarTema = () => {
@@ -55,3 +48,4 @@ function App() {
 }
 
 export default App;
+
