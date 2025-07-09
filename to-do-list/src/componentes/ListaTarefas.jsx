@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ItemTarefa from "./ItemTarefa"; 
 import './ListaTarefas.css';
 
-function ListaTarefas({ tarefas, aoConcluir, children }) {
+function ListaTarefas({ tarefas, aoConcluir,children, aoExcluir, aoAlterarPrioridade, }) { 
   const [lista, setLista] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function ListaTarefas({ tarefas, aoConcluir, children }) {
     );
     setLista(listaOrdenada);
   };
-
+ // esse é o meu que preciso subir para o git
   return (
     <div className="lista">
       <div className="cabecalho">
@@ -35,7 +35,7 @@ function ListaTarefas({ tarefas, aoConcluir, children }) {
       </div>
       <div className="itens">
         {lista.map(tarefa => (
-          <ItemTarefa key={tarefa.id} tarefa={tarefa} aoClicar={aoConcluir} />
+           <ItemTarefa key={tarefa.id} tarefa={tarefa} aoClicar={aoConcluir} aoExcluir={aoExcluir} aoAlterarPrioridade={aoAlterarPrioridade}/>
         ))}
       </div>
     </div>

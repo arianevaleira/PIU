@@ -1,0 +1,67 @@
+.formulario {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  padding: 12px;
+  border: 1px solid #dbe2ef;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #3f72af;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(63, 114, 175, 0.2);
+}
+
+.formulario textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.formulario button {
+  align-self: center;
+}
+
+.formulario .botao-3d {
+  align-self: center;
+  font-size: 1rem;
+}
+
+/* Modo escuro */
+
+.container.escuro .formulario {
+  background-color: #2d3436;
+  color: #ecf0f1;
+}
+
+.container.escuro .formulario input,
+.container.escuro .formulario textarea,
+.container.escuro .formulario select {
+  background-color: #3a4750;
+  color: #ecf0f1;
+  border-color: #43536b;
+}
+
+.container.escuro .formulario input:focus,
+.container.escuro .formulario textarea:focus,
+.container.escuro .formulario select:focus {
+  box-shadow: 0 0 0 2px rgba(165, 216, 255, 0.3);
+}
