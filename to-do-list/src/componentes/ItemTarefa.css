@@ -64,10 +64,17 @@
 .botao-excluir {
   background-color: #ffb7b7; 
   color: #5c2c2c;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 100px;
 }
 
 .botao-excluir:hover {
   background-color: #ff9b9b;
+  transform: translateY(-1px);
 }
 
 select {
