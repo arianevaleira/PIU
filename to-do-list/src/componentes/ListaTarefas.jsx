@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ItemTarefa from "./ItemTarefa"; 
 import './ListaTarefas.css';
 
-function ListaTarefas({ tarefas, aoConcluir,children, aoExcluir, aoAlterarPrioridade, }) { 
+function ListaTarefas({ tarefas, aoConcluir,children, aoExcluir, aoAlterarPrioridade }) { 
   const [lista, setLista] = useState([]);
   
   useEffect(() => {
