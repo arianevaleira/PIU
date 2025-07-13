@@ -16,7 +16,6 @@ function ListaTarefas({ tarefas, aoConcluir,children, aoExcluir, aoAlterarPriori
     setLista(listaOrdenada);
   };
 
-
   const ordenarPorPrioridade = () => {
     const prioridadeValor = { "Alta": 3, "Media": 2, "Baixa": 1 };
     const listaOrdenada = [...lista].sort((a, b) =>
