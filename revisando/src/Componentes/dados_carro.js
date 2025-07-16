@@ -31,5 +31,4 @@ export const carros = [
     modelo: 'byd',
     cor: 'vermelho',
     ano: 2024},
-
 ]
