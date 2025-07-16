@@ -22,7 +22,7 @@ export default function EffectAPI() {
   }, []); // O array vazio garante que o efeito execute apenas uma vez
 
   if (loading) {
-    return <p>Carregando...</p>;
+    return <p>Carregando...</p>; //Enquanto carrega exibe esse paragrafo
   }
 
   return (

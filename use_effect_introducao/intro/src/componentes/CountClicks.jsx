@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export default function CountClicks() {
+function CountClicks() {
   const [count, setCount] = useState(0)
 
   //useeffect (configurar, dependencias?)
@@ -14,7 +14,7 @@ export default function CountClicks() {
 
   useEffect(() => {
     handleColor()
-  },)
+  },[{count}]) //Quando o componente recarrega e quando o count muda 
 
   return (
     <>
@@ -26,3 +26,6 @@ export default function CountClicks() {
     </>
   )
 }
+
+
+export default CountClicks;
