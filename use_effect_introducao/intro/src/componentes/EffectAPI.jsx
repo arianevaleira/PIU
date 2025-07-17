@@ -6,7 +6,7 @@ export default function EffectAPI() {
 
   useEffect(() => {
     // Usamos uma função assíncrona dentro do useEffect
-    const fetchUsuarios = async () => {
+    const fetchUsuarios = async () => { 
       try {
         const response = await fetch('https://jsonplaceholder.typicode.com/users'); //fecth faz uma requisição HTTP utilizando o método GET
         const data = await response.json(); //await faz com que a requisição aguarde os dados chegarem. O método json converte os dados para json
@@ -30,7 +30,7 @@ export default function EffectAPI() {
       <h1>Lista de Usuários</h1>
       <ul>
         {usuarios.map(usuario => (
-          <li key={usuario.id}>{usuario.name}</li>
+          <li key={usuario.id}>{usuario.name} | {usuario.username} | {usuario.address.city}</li>
         ))}
       </ul>
     </div>

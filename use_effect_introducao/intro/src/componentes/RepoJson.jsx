@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+//Json plachehoder 
 export default function RepoJson() {
   const [dados, setDados] = useState([]);
   const [loading, setLoading] = useState(true); // Estado de carregamento
@@ -12,7 +12,7 @@ export default function RepoJson() {
         const data = await response.json(); //await faz com que a requisição aguarde os dados chegarem. O método json converte os dados para json
         setDados(data); // Atualiza o estado com os dados recebidos
       } catch (error) {
-        console.error("Erro ao buscar usuários:", error);
+        console.error("Erro ao buscar usuários:", error); 
       } finally {
         setLoading(false); // Finaliza o carregamento
       }
