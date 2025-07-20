@@ -9,8 +9,8 @@ export default function EffectAPI() {
     const fetchUsuarios = async () => { 
       try {
         const response = await fetch('https://jsonplaceholder.typicode.com/users'); //fecth faz uma requisição HTTP utilizando o método GET
-        const data = await response.json(); //await faz com que a requisição aguarde os dados chegarem. O método json converte os dados para json
-        setUsuarios(data); // Atualiza o estado com os dados recebidos
+        const dados = await response.json(); //await faz com que a requisição aguarde os dados chegarem. O método json converte os dados para json
+        setUsuarios(dados); // Atualiza o estado com os dados recebidos
       } catch (error) {
         console.error("Erro ao buscar usuários:", error);
       } finally {

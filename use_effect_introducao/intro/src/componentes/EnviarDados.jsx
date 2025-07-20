@@ -1,3 +1,4 @@
+import './EnviarDados.css'
 import { useState } from 'react';
 
 function EnviarDados() {
@@ -38,7 +39,7 @@ function EnviarDados() {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: 'auto', padding: '20px' }}>
+    <div className='Div' style={{ maxWidth: '400px', margin: 'auto', padding: '20px' }}>
       <h2>Enviar Dados para a API</h2>
       <form onSubmit={handleSubmit}>
         <div>

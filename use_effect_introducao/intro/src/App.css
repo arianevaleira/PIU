@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   margin-top: 20px;
   gap: 20px;
+
 }
 
 .tabela {
@@ -16,18 +17,21 @@
 }
 
 .tabela-nome {
-  background-color: #f0f8ff;
+  background-color: #81c0f7;
   border: 2px solid #0077cc;
+  color: #444;
 }
 
 .tabela-username {
-  background-color: #ffe4e1;
+  background-color: #ddb4f0;
   border: 2px solid #cc3366;
+  color: #444;
 }
 
 .tabela-cidade {
-  background-color: #f5fff0;
+  background-color: #abd198;
   border: 2px solid #33aa33;
+  color: #444;
 }
 
 table {

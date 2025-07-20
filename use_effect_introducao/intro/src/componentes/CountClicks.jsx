@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, use } from 'react'
 
 function CountClicks() {
   const [count, setCount] = useState(0)
+  const [monitor, setMonitor] = useState(false) 
+  const [mudar, setMudar] = useState(0)
 
   //useeffect (configurar, dependencias?)
 
@@ -9,16 +11,24 @@ function CountClicks() {
             const cor = ["#FF6B6B", "#6BCB77", "#4D96FF", "#FFD93D", "#835AFD"];
             const randomColor = cor[Math.floor(Math.random() * cor.length)];
             document.body.style.backgroundColor = randomColor;
+              
+            if (monitor) {
+              setMudar(mudar+1) //Alterar mudar sempre 
+            }
     }
 
   useEffect(() => {
     handleColor()
-  },[{count}]) //Quando o componente recarrega e quando o count muda 
-
+  },[{mudar}]) //Ele fica observando essa variavel  
+   
+  function mudaraoClicar(){
+    setCount(count+1)
+    setMonitor(!monitor) //aqui eu inverto o estado 
+  }
   return (
     <>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={mudaraoClicar}>
           count is {count}
         </button>
       </div>
