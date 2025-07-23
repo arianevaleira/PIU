@@ -8,7 +8,7 @@ function CountClicks() {
   //useeffect (configurar, dependencias?)
 
   function handleColor(){
-            const cor = ["#FF6B6B", "#6BCB77", "#4D96FF", "#FFD93D", "#835AFD"];
+            const cor = ["#c75f77", "#fefab6", "#77a493", "#836177", "#654b49"];
             const randomColor = cor[Math.floor(Math.random() * cor.length)];
             document.body.style.backgroundColor = randomColor;
               
