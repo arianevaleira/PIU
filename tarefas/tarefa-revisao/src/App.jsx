@@ -6,12 +6,14 @@ import ModoEscuro from './componentes/ModoEscuro'
 import MudarCor from './componentes/MudarCor'
 import Formulario from './componentes/Formulario'
 import ListaApi from './componentes/ListaApi'
+import Tarefa from './componentes/Tarefa'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <Tarefa/>
       <ListaApi/>
       <Formulario/>
       <ModoEscuro/>
