@@ -17,6 +17,7 @@ function App() {
 
   return (
     <>
+      <ListarChamada/>
       <ListaDigitada/>
       <ListaTarefas/>
       <Tarefa/>
