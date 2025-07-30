@@ -9,14 +9,18 @@ import ListaApi from './componentes/ListaApi'
 import Tarefa from './componentes/Tarefa'
 import ListaTarefas from './componentes/TarefaImport'
 import Listarfastapi from './componentes/ListarFastapi'
+import ContadorDeCliques from './componentes/ContadorCliques'
+import ListaDigitada from './componentes/ListaDigitada'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <ListaDigitada/>
       <ListaTarefas/>
       <Tarefa/>
+      <ContadorDeCliques/>
       <ListaApi/>
       <Formulario/>
       <ModoEscuro/>
