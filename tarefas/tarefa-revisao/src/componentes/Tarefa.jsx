@@ -8,7 +8,8 @@ export default function ListaTarefas() {
 
   function marcarComoConcluida(id) {
     const novas = tarefas.map(tarefa =>
-      tarefa.id === id ? { ...tarefa, concluida: !tarefa.concluida } : tarefa
+      tarefa.id === id ? { ...tarefa, concluida: !tarefa.concluida } // Muda o estado de concluída, so da tarefa clicada
+      : tarefa // Mantém as outras tarefas inalteradas
     );
     setTarefas(novas);
   }
@@ -27,7 +28,7 @@ export default function ListaTarefas() {
             onClick={() => marcarComoConcluida(tarefa.id)}
             style={{
               textDecoration: tarefa.concluida ? 'line-through' : 'none',
-              color: tarefa.concluida ? 'gray' : 'black',
+              color: tarefa.concluida ? 'gray' : 'pink',
               cursor: 'pointer'
             }}
           >

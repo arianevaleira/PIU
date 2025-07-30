@@ -7,12 +7,14 @@ import MudarCor from './componentes/MudarCor'
 import Formulario from './componentes/Formulario'
 import ListaApi from './componentes/ListaApi'
 import Tarefa from './componentes/Tarefa'
+import ListaTarefas from './componentes/TarefaImport'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <ListaTarefas/>
       <Tarefa/>
       <ListaApi/>
       <Formulario/>
