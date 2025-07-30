@@ -8,6 +8,7 @@ import Formulario from './componentes/Formulario'
 import ListaApi from './componentes/ListaApi'
 import Tarefa from './componentes/Tarefa'
 import ListaTarefas from './componentes/TarefaImport'
+import Listarfastapi from './componentes/ListarFastapi'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
       <Formulario/>
       <ModoEscuro/>
       <MudarCor/>
+      <Listarfastapi/>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
