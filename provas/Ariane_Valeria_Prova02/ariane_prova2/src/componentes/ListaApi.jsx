@@ -7,7 +7,7 @@ export default function ListaApi() {
   const [numero, setNumero] = useState()
 
  
-   const usuarios1 = usuarios.filter((usuario) => usuario.userId === numero)
+   const usuarios1 = usuarios.filter((usuario) => usuario.userId === Number(numero))
    function cadastrarNumero(e){
       e.preventDefault()
       console.log(numero)
@@ -42,19 +42,10 @@ export default function ListaApi() {
         <div>
         <h1>Lista de Usuários</h1>
         <form onSubmit={cadastrarNumero}>
-            <input type="text" id="numero" placeholder= "Digite o userID" onChange={(e) => setNumero(e.target.value)}/>
+            <input type="number" id="numero" placeholder= "Digite o userID" onChange={(e) => setNumero(e.target.value)}/>
         </form>
         <ul>
             {usuarios1
-            .map(usuario => (
-            <li key={usuario.id}>{usuario.title} | {usuario.userId} </li>
-            ))}
-        </ul>
-        </div>
-        <div>
-        <h1>Lista de Usuários Demostração </h1> {/*So para Mostrar que a logica esta certa */}
-        <ul>
-            {usuarios.filter((usuario) => usuario.userId === 5)
             .map(usuario => (
             <li key={usuario.id}>{usuario.title} | {usuario.userId} </li>
             ))}
