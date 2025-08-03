@@ -7,11 +7,15 @@ export default function ListaApi() {
   const [numero, setNumero] = useState()
 
  
-   const usuarios1 = usuarios.filter((usuario) => usuario.userId === Number(numero))
-   function cadastrarNumero(e){
+  const usuarios1 = usuarios.filter((usuario) => usuario.userId === Number(numero))
+  function cadastrarNumero(e){
       e.preventDefault()
       console.log(numero)
-   }
+  }
+  
+  const carregarUsuarios = async () => {
+    setMostrarNomes(true); 
+  } 
 
   useEffect(() => {
     // Usamos uma função assíncrona dentro do useEffect
@@ -43,13 +47,16 @@ export default function ListaApi() {
         <h1>Lista de Usuários</h1>
         <form onSubmit={cadastrarNumero}>
             <input type="number" id="numero" placeholder= "Digite o userID" onChange={(e) => setNumero(e.target.value)}/>
+            <input type="submit" onClick={carregarUsuarios} value="Cadastrar"/>
         </form>
-        <ul>
-            {usuarios1
-            .map(usuario => (
-            <li key={usuario.id}>{usuario.title} | {usuario.userId} </li>
-            ))}
-        </ul>
+        { mostrarNomes && (
+          <ul>
+              {usuarios1
+              .map(usuario => (
+              <li key={usuario.id}>{usuario.title} | {usuario.userId} </li>
+              ))}
+          </ul>
+        )}
         </div>
     </>
   );
