@@ -72,3 +72,8 @@
 .Conteiner button:active {
     transform: translateY(0);
 }
+
+
+p{
+    color: rgb(175, 255, 69);
+}
